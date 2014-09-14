@@ -5,7 +5,7 @@ def isIn(char, aStr):
     
     returns: True if char is in aStr; False otherwise
     '''
-    
+    # Checked OK by EDx grader
     if aStr!='':
         midPoint=len(aStr)/2
         midChar=aStr[midPoint]
@@ -19,9 +19,6 @@ def isIn(char, aStr):
             if char<midChar:
                 return(isIn(char,aStr[:midPoint]))
     
-            elif char>midChar:
-                return(isIn(char,aStr[midPoint+1:-1]))
-                
             else:
                 return(isIn(char,aStr[midPoint+1:]))
     else:
